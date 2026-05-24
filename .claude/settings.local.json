@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//mnt/c/Users/**)",
+      "Read(//c/Users/anton/**)",
+      "Bash(find /home/anton -name \"*.py\" -o -name \"*.js\" -o -name \"package.json\" -o -name \"requirements.txt\" 2>/dev/null | head -30)",
+      "Bash(cat //wsl.localhost/ubuntu/home/anton/edplatform_wsl/backend/requirements.txt)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/backend/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/frontend/src/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/frontend/src/pages/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/backend/analytics/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/backend/activity_tracker/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/backend/testing/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/backend/core/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/backend/users/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/frontend/src/context/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/frontend/src/api/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/frontend/src/pages/teacher/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/frontend/src/components/layout/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/frontend/src/components/**)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/frontend/src/pages/student/**)",
+      "Bash(chmod +x //wsl.localhost/ubuntu/home/anton/edplatform_wsl/seed.sh)",
+      "Read(///wsl.localhost/ubuntu/home/anton/edplatform_wsl/backend/courses/**)",
+      "Bash(pandoc \"/mnt/c/Users/anton/Desktop/ВКР/ВКР НОРКИН .docx\" -t plain)",
+      "Bash(extract-text \"C:\\\\Users\\\\anton\\\\Desktop\\\\ВКР\\\\ВКР НОРКИН .docx\")",
+      "PowerShell(wsl bash -c \"cd ~/edplatform_wsl/backend && pkill -f 'manage.py runserver' 2>/dev/null; sleep 1; nohup python manage.py runserver > /tmp/django.log 2>&1 &\")",
+      "PowerShell(wsl bash -c \"tail -5 /tmp/django.log\")",
+      "Bash(pkill -f 'manage.py runserver')",
+      "Bash(nohup python manage.py runserver)",
+      "Read(//tmp/**)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:8000/api/activity/my-metrics/\" -Method GET; $r.StatusCode } catch { $_.Exception.Response.StatusCode.value__ })"
+    ]
+  }
+}
